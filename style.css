@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #4c4c4c;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+}
+.text-2 {
+    color: #000;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #4c4c4c;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7e7e7e;
+}
+
+/* Sound */
+#musicplay {
+    position: fixed;
+    right: 6px;
+    bottom: 6px;
+}
+
+#musicplay:hover {
+    cursor: pointer;
+}
+
+#musicplay {
+    width: 40px;
+    height: auto;
+}
+
+/* Preloader */
+#preloaderWrapper {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fe9900;
+    opacity: 1;
+}
+
+#preloaderWrapper.off {
+    opacity: 0;
+    transition: 3s all ease-in-out;
+}
+
+svg {
+    display: block;
+    width: 258px;
+    height: 258px;
+    position: absolute;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tree {
+    fill: #ffffff;
+}
+
+.circle-mask {
+    transform-origin: 50% 100%;
+    animation: scale 4s infinite ease-out;
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: scale(0.0);
+    }
+
+    7%,
+    90% {
+        transform: scale(0.4);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
